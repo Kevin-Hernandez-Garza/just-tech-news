@@ -1,0 +1,27 @@
+{{!-- post info partial --}}
+{{> post-info post}}
+
+{{!-- conditionally render the comment form --}}
+{{#if loggedIn}}
+<form class="comment-form">
+    <div>
+        <textarea name="comment-body"></textarea>
+    </div>
+
+    <div>
+        <button type="submit">add comment</button>
+        <button type="button" class="upvote-btn">upvote</button>
+    </div>
+</form>
+{{/if}}
+
+{{!-- comments partial --}}
+{{> comments post.comments}}
+
+
+{{!-- relative paths --}}
+{{!-- conditionally rendering the script elements --}}
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+<script src="/javascript/upvote.js"></script>
+{{/if}}
