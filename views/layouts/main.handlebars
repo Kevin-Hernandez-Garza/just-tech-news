@@ -18,6 +18,7 @@
       <nav>
         {{!-- conditionally rendering the login or logout buttons depending on the user --}}
         {{#if loggedIn}}
+        <a href="/dashboard">dashboard</a>
         <button id="logout" class="btn-no-style">logout</button>
         {{else}}
         <a href="/login">login</a>
